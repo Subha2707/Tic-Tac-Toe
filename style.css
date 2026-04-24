@@ -1,68 +1,80 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
 }
-body{
-    background-color: #548687;
+
+body {
+    background: linear-gradient(135deg, #1f4037, #99f2c8);
     text-align: center;
+    color: white;
 }
-h1{
-    font-size: 50px;
+
+h1 {
+    margin-top: 20px;
+    font-size: 3rem;
+    letter-spacing: 2px;
 }
-.container{
-    height: 70vh;
+
+.container {
+    height: 65vh;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
-.game{
-    height: 60vmin;
-    width: 60vmin;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap:1.5vmin;
-    
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 320px;
 }
-.box{
-    height: 18vmin;
-    width: 18vmin;
+
+.box {
+    height: 100px;
+    width: 100px;
+    border-radius: 15px;
     border: none;
-    border-radius: 1rem;
-    box-shadow: 0 0 1rem rgba(0,0,0,0.4);
-    font-size: 8vmin;
-    color: #b0413e;
-    background-color: #ffffc7;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    background: #ffffff;
+    color: #333;
+    transition: 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
-.reset-btn{
-    padding: 1rem;
-    font-size: 1.25rem;
-    border-radius: 1rem;
-    background-color: #191913;
-    color: whitesmoke;
+
+.box:hover {
+    transform: scale(1.05);
+    background: #f1f1f1;
+}
+
+.reset-btn, .new-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 30px;
     border: none;
+    cursor: pointer;
+    background: #000;
+    color: white;
+    transition: 0.3s;
 }
-.new-btn{
-    display: inline-block;
-    margin-left: 20px;
-    padding: 1rem;
-    font-size: 1.25rem;
-    border-radius: 1rem;
-    background: #191913;
-    color: whitesmoke;
-    justify-content: center;
-    align-items: center;
-    border: none;
+
+.reset-btn:hover, .new-btn:hover {
+    background: #444;
 }
-#msg{
-    color: #ffffc7;
-    font-size: 30px;
+
+#msg {
+    font-size: 1.8rem;
+    margin: 15px 0;
 }
-.msg-container{
-    margin-bottom: 10px;
+
+.msg-container {
+    margin-top: 10px;
 }
-.hide{
+
+.hide {
     display: none;
 }
